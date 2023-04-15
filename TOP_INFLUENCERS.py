@@ -15,7 +15,6 @@ import streamlit as st
 import time
 
 def plot_animation(df):
-def plot_animation(df):
     dots = alt.Chart(df).mark_circle().encode(
         x=alt.X('Date:T',axis=alt.Axis(title='Date')),
         y=alt.Y('# of followers:Q',axis=alt.Axis(title='Number of Followers')),
