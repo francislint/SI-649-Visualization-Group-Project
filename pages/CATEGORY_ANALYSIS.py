@@ -3,12 +3,9 @@ import pandas as pd
 import altair as alt
 from urllib.error import URLError
 
-st.markdown("# DataFrame Demo")
-st.sidebar.header("DataFrame Demo")
-st.write(
-    """This demo shows how to use `st.write` to visualize Pandas DataFrames.
-(Data courtesy of the [UN Data Explorer](http://data.un.org/Explorer.aspx).)"""
-)
+st.markdown("# Influencer Category Analysis on Instagram and YouTube")
+# st.sidebar.header("DataFrame Demo")
+
 
 import pandas as pd
 import altair as alt
@@ -50,7 +47,7 @@ yt_pie_chart = alt.Chart(yt_cate).mark_arc(innerRadius=25, stroke="#fff").encode
 ).properties(
     width=200,
     height=200,
-    title = alt.TitleParams(text='Category VS Influencers', fontSize=20, anchor='start')
+    title = alt.TitleParams(text='Category Distribution', fontSize=16, anchor='start')
 ).add_selection(
     single
 )
@@ -68,7 +65,7 @@ yt_bar_chart = alt.Chart(yt_cate).mark_bar().encode(
 ).properties(
     width=400,
     height=200,
-    title = alt.TitleParams(text='Category VS Subscribers', fontSize=20, anchor='start')
+    title = alt.TitleParams(text='# of Subscribers in Each Category', fontSize=16, anchor='start')
 ).add_selection(
     single
 )
@@ -95,7 +92,7 @@ ins_pie_chart = alt.Chart(ins_cate).mark_arc(innerRadius=25, stroke="#fff").enco
 ).properties(
     width=200,
     height=200,
-    title = alt.TitleParams(text='Category VS Influencers', fontSize=20, anchor='start')
+    title = alt.TitleParams(text='Category Distribution', fontSize=16, anchor='start')
 ).add_selection(
     single
 )
@@ -113,12 +110,12 @@ ins_bar_chart = alt.Chart(ins_cate).mark_bar().encode(
 ).properties(
     width=400,
     height=200,
-    title = alt.TitleParams(text='Category VS Followers', fontSize=20, anchor='start')
+    title = alt.TitleParams(text='# of Followers in Each Category', fontSize=16, anchor='start')
 ).add_selection(
     single
 )
 
-yt_combined = (yt_pie_chart | yt_bar_chart).properties(title='Youtube').configure_title(fontSize=36, anchor='middle')
+yt_combined = (yt_pie_chart | yt_bar_chart).properties(title='YouTube').configure_title(fontSize=36, anchor='middle')
 ins_combined = (ins_pie_chart | ins_bar_chart).properties(title='Instagram').configure_title(fontSize=36, anchor='middle')
 
 
