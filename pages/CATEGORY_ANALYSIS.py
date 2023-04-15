@@ -48,8 +48,8 @@ yt_pie_chart = alt.Chart(yt_cate).mark_arc(innerRadius=25, stroke="#fff").encode
     ),
     tooltip=[alt.Tooltip('Category:N', title='Influencer Category'), alt.Tooltip('Count:Q', title='Number of Influencers')]
 ).properties(
-    width=250,
-    height=250,
+    width=200,
+    height=200,
     title = alt.TitleParams(text='Category VS Influencers', fontSize=20, anchor='start')
 ).add_selection(
     single
@@ -66,8 +66,8 @@ yt_bar_chart = alt.Chart(yt_cate).mark_bar().encode(
     ),
     tooltip=[alt.Tooltip('Category:N', title='Influencer Category'), alt.Tooltip('Total Subscribers:Q', title='Number of Subscribers')]
 ).properties(
-    width=500,
-    height=250,
+    width=400,
+    height=200,
     title = alt.TitleParams(text='Category VS Subscribers', fontSize=20, anchor='start')
 ).add_selection(
     single
@@ -93,8 +93,8 @@ ins_pie_chart = alt.Chart(ins_cate).mark_arc(innerRadius=25, stroke="#fff").enco
     ),
     tooltip=[alt.Tooltip('Category:N', title='Influencer Category'), alt.Tooltip('Count:Q', title='Number of Influencers')]
 ).properties(
-    width=250,
-    height=250,
+    width=200,
+    height=200,
     title = alt.TitleParams(text='Category VS Influencers', fontSize=20, anchor='start')
 ).add_selection(
     single
@@ -111,8 +111,8 @@ ins_bar_chart = alt.Chart(ins_cate).mark_bar().encode(
     ),
     tooltip=[alt.Tooltip('Category:N', title='Influencer Category'), alt.Tooltip('Total Followers:Q', title='Number of Followers')]
 ).properties(
-    width=500,
-    height=250,
+    width=400,
+    height=200,
     title = alt.TitleParams(text='Category VS Followers', fontSize=20, anchor='start')
 ).add_selection(
     single
