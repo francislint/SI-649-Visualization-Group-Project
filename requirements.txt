@@ -1,0 +1,4 @@
+altair==4.2.2
+numpy==1.23.3
+pandas==1.5.1
+openpyxl==3.0.9
