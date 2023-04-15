@@ -110,8 +110,8 @@ ins_bar_chart = alt.Chart(ins_cate).mark_bar().encode(
     single
 )
 
-yt_combined = (yt_pie_chart | yt_bar_chart).properties(title='Yotube', width=1000, height=500).configure_title(fontSize=36, anchor='middle')
-ins_combined = (ins_pie_chart | ins_bar_chart).properties(title='Instagram', width=1000, height=500).configure_title(fontSize=36, anchor='middle')
+yt_combined = (yt_pie_chart | yt_bar_chart).properties(title='Youtube').configure_title(fontSize=36, anchor='middle')
+ins_combined = (ins_pie_chart | ins_bar_chart).properties(title='Instagram').configure_title(fontSize=36, anchor='middle')
 
 
 # streamlit visualization
