@@ -3,19 +3,15 @@ import pandas as pd
 import altair as alt
 from urllib.error import URLError
 
-st.markdown("# DataFrame Demo")
-st.sidebar.header("DataFrame Demo")
-st.write(
-    """This demo shows how to use `st.write` to visualize Pandas DataFrames.
-(Data courtesy of the [UN Data Explorer](http://data.un.org/Explorer.aspx).)"""
-)
+st.markdown("# Engagement Analysis on TikTok and Instagram")
+# st.sidebar.header("DataFrame Demo")
 
 import streamlit as st
 from PIL import Image
 
 # Define a dictionary that maps options to image URLs
 option_images = {
-    'Correlations': ['imgs/tiktok_cor.png', 'imgs/ins_cor.png'],
+    'Correlations Heatmap': ['imgs/tiktok_cor.png', 'imgs/ins_cor.png'],
     'Views V.S. Likes': ['imgs/tiktok_vl.png', 'imgs/ins_vl.png'],
     'Views V.S. Comments': ['imgs/tiktok_vc.png', 'imgs/ins_vc.png'],
     'Likes V.S. Comments': ['imgs/tiktok_lc.png', 'imgs/ins_lc.png'],
