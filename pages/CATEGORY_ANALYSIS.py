@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
 from urllib.error import URLError
 
-st.markdown("# Influencer Category Analysis on Instagram and YouTube")
+st.markdown("### Influencer Category Analysis on Instagram and YouTube")
 # st.sidebar.header("DataFrame Demo")
 
 
