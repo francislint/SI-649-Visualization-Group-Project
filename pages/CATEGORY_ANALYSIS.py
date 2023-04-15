@@ -115,5 +115,6 @@ ins_combined = (ins_pie_chart | ins_bar_chart).properties(title='Instagram').con
 
 
 # streamlit visualization
-st.altair_chart(yt_combined, theme="streamlit", use_container_width=True)
-st.altair_chart(ins_combined, theme="streamlit", use_container_width=True)
+st.altair_chart(yt_combined)
+st.altair_chart(ins_combined)
+# st.altair_chart(ins_combined, theme="streamlit", use_container_width=True)
