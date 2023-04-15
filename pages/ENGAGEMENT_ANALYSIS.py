@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
 from urllib.error import URLError
 
-st.markdown("### Engagement Analysis on TikTok and Instagram")
+st.markdown("### Audience Engagement Analysis on TikTok and Instagram")
 # st.sidebar.header("DataFrame Demo")
 
 import streamlit as st
