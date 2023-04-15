@@ -12,3 +12,5 @@ st.write("## Social Media Platforms Comparisons! 👋")
 st.image('imgs/social media.jpeg')
 st.sidebar.success("Select a Visualization Above.")
 
+
+st.write('We are interested in exploring the top 1000 influencers in different social media platforms, i.e. **Instagram**, **YouTube** and **Tiktok**. ')
