@@ -9,6 +9,6 @@ st.set_page_config(
 )
 
 st.write("## Social Media Platforms Comparisons! 👋")
-
+st.image('imgs/social media.jpeg')
 st.sidebar.success("Select a Visualization Above.")
 
