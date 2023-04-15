@@ -15,6 +15,13 @@ import streamlit as st
 import time
 
 def plot_animation(df):
+def plot_animation(df):
+    dots = alt.Chart(df).mark_circle().encode(
+        x=alt.X('Date:T',axis=alt.Axis(title='Date')),
+        y=alt.Y('# of followers:Q',axis=alt.Axis(title='Number of Followers')),
+        color='Influencer:N'
+     ).interactive()
+
     lines = alt.Chart(df).mark_line().encode(
         x=alt.X('Date:T',axis=alt.Axis(title='Date')),
         y=alt.Y('# of followers:Q',axis=alt.Axis(title='Number of Followers')),
@@ -23,12 +30,13 @@ def plot_animation(df):
         width=600,
         height=300,
         title='Follower Growth of the Top 5 Influencers on Instagram'
-     ) 
-    return lines
+     )
+
+    return dots+lines
 
 
 def preprocessDF(df):
-    names_list = list(ins_top_5.columns)[1:]
+    names_list = list(df.columns)[1:]
     Influencer_list = []
     value_list = []
     for name in names_list:
@@ -51,40 +59,54 @@ def generate_step_df(df, size):
 
 
 ins_top_5 = pd.read_excel('data/Ins top 5.xlsx')
+youtube_top_5 = pd.read_excel('data/Youtube top 5.xlsx')
+tiktok_top_5 = pd.read_excel('data/Tiktok top 5.xlsx')
 
-lines = alt.Chart(preprocessDF(ins_top_5)).mark_line().encode(
-     x=alt.X('Date:T',axis=alt.Axis(title='Date')),
-     y=alt.Y('# of followers:Q',axis=alt.Axis(title='Number of Followers')),
-     color='Influencer:N'
-).properties(
-    title='Follower Growth of the Top 5 Influencers on Instagram',
-    width=600,
-    height=300,
-)
+lines_ins = plot_animation(preprocessDF(ins_top_5))
+lines_youtube = plot_animation(preprocessDF(youtube_top_5))
+lines_tiktok = plot_animation(preprocessDF(tiktok_top_5))
 
 number_of_influencer = 5
 N = ins_top_5.shape[0] # number of elements in the dataframe
 burst = 6       # number of elements (months) to add to the plot
 size = burst     # size of the current dataset
 
-line_plot = st.altair_chart(lines)
+st.write('Press the Start button below to animate the plot!')
+
 start_btn = st.button('Start')
+
+tab_ins, tab_youtube, tab_tiktok = st.tabs(["Instagram Top 5 Influencers", 
+                                            "YouTube Top 5 Influencers", 
+                                            "Tiktok Top 5 Influencers"])
+
+with tab_ins:
+    line_plot_ins = st.altair_chart(lines_ins, use_container_width=True)
+with tab_youtube:
+    line_plot_youtube = st.altair_chart(lines_youtube, use_container_width=True)
+with tab_tiktok:
+    line_plot_tiktok = st.altair_chart(lines_tiktok, use_container_width=True)
 
 
 if start_btn:
     for i in range(1,N):
-        step_df = generate_step_df(preprocessDF(ins_top_5), size)
-        lines = plot_animation(step_df)
-        line_plot = line_plot.altair_chart(lines)
+        step_df_ins = generate_step_df(preprocessDF(ins_top_5), size)
+        step_df_youtube = generate_step_df(preprocessDF(youtube_top_5), size)
+        step_df_tiktok = generate_step_df(preprocessDF(tiktok_top_5), size)
+
+        lines_ins = plot_animation(step_df_ins)
+        lines_youtube = plot_animation(step_df_youtube)
+        lines_tiktok = plot_animation(step_df_tiktok)
+
+        with tab_ins:
+            line_plot_ins = line_plot_ins.altair_chart(lines_ins, use_container_width=True)
+        with tab_youtube:
+            line_plot_youtube = line_plot_youtube.altair_chart(lines_youtube, use_container_width=True)
+        with tab_tiktok:
+            line_plot_tiktok = line_plot_tiktok.altair_chart(lines_tiktok, use_container_width=True)
+
         size = i + burst
         if size >= N: 
             size = N - 1
         time.sleep(0.2)
 
 
-
-st.markdown(
-    """
-    blabla
-"""
-)
