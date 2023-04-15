@@ -48,6 +48,8 @@ yt_pie_chart = alt.Chart(yt_cate).mark_arc(innerRadius=50, stroke="#fff").encode
     ),
     tooltip=[alt.Tooltip('Category:N', title='Influencer Category'), alt.Tooltip('Count:Q', title='Number of Influencers')]
 ).properties(
+    width=300,
+    height=300,
     title = alt.TitleParams(text='Category VS Influencers', fontSize=20, anchor='start')
 ).add_selection(
     single
