@@ -19,7 +19,7 @@ def plot_animation(df):
      ).properties(
         width=600,
         height=300,
-        title='Follower Growth of the Top 5 Influencers on Instagram'
+        title='Follower Growth of the Top 5 Influencers'
      )
 
     return dots+lines
