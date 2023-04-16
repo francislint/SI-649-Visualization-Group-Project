@@ -65,9 +65,9 @@ st.write('Press the Start button below to animate the plot!')
 
 start_btn = st.button('Start')
 
-tab_ins, tab_youtube, tab_tiktok = st.tabs(["Instagram Top 5 Influencers", 
-                                            "YouTube Top 5 Influencers", 
-                                            "Tiktok Top 5 Influencers"])
+tab_ins, tab_youtube, tab_tiktok = st.tabs(["Instagram", 
+                                            "YouTube", 
+                                            "Tiktok"])
 
 with tab_ins:
     line_plot_ins = st.altair_chart(lines_ins, use_container_width=True)
