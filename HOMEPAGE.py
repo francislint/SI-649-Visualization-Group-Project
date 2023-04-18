@@ -27,4 +27,4 @@ st.write('### Methods')
 st.write('''
 - Pandas for Data Processing
 - Seaborn for Static Visualization
-        ‘’‘)
+        ''')
