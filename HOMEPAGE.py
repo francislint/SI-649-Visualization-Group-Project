@@ -20,7 +20,12 @@ st.write('- The **category distribution** of influencers and the **number of fol
 st.write('- The **audience engagement** (e.g. average views, averege likes and average comments) on Tiktok & Instagram')
 st.write('- The **fluctuations in the follower count** of the leading 5 influencers on all platforms over the past 3 years ')
 st.write('- The **influencer distribution** for Instagram & YouTube')
-
+st.write('''
+- The **category distribution** of influencers and the **number of followers in each category** on Instagram & YouTube'
+- The **audience engagement** (e.g. average views, averege likes and average comments) on Tiktok & Instagram
+- The **fluctuations in the follower count** of the leading 5 influencers on all platforms over the past 3 years
+- The **influencer distribution** for Instagram & YouTube
+''')
 st.write('### Data Source')
 st.write('')
 st.write('### Methods')
