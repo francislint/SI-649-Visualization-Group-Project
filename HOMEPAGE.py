@@ -25,6 +25,7 @@ st.write('### Data Source')
 st.write('')
 st.write('### Methods')
 st.write('''
-- Pandas for Data Processing
-- Seaborn for Static Visualization
+- **Seaborn** for static visualization(*Category Analysis*)
+- **Tableau** for geographic visualization(*Influencer Distribution*)
+- **Altair** for interactive dynamic visualization(*Audience Engagement & Follower Growth*)
         ''')
