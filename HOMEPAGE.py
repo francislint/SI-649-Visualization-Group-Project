@@ -22,10 +22,16 @@ st.write('''
 - The **influencer distribution** for Instagram & YouTube
         ''')
 st.write('### Data Source')
-st.write('')
+st.write('''
+- Top 1000 Social Media Influencers in 2022
+  - Collected from Kaggle
+  - Feature \- Name, Followers, Views, Likes, Comments, Country, Content Category, etc.
+- Follower / subscriber count of top influencers on various platforms
+  - Over the past 3 years        ''')
 st.write('### Methods')
 st.write('''
-- **Seaborn** for static visualization(*Category Analysis*)
-- **Tableau** for geographic visualization(*Influencer Distribution*)
-- **Altair** for interactive dynamic visualization(*Audience Engagement & Follower Growth*)
+- **Seaborn** for static visualization (<u>Category Analysis</u>)
+- **Tableau** for geographic visualization (<u>Influencer Distribution</u>)
+- **Altair** for interactive dynamic visualization (<u>Audience Engagement & Follower Growth</u>)
+- **Streamlit** for visualization and website design and layouts
         ''')
