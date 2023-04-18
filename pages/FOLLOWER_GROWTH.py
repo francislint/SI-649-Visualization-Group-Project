@@ -97,6 +97,6 @@ if start_btn:
         size = i + burst
         if size >= N: 
             size = N - 1
-        time.sleep(0.2)
+        time.sleep(0.1)
 
 
