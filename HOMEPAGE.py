@@ -8,7 +8,7 @@ st.set_page_config(
     page_icon="👋",
 )
 
-st.write("## Social Media Platforms Comparisons! 👋")
+st.write("## BATTLE OF SOCIAL MEDIA GIANTS: COMPARING TIKTOK, INSTAGRAM, YOUTUBE 👋")
 st.image('imgs/social media.jpeg')
 st.sidebar.success("Select a Visualization Above.")
 
