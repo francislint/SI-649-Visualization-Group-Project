@@ -12,11 +12,11 @@ def main():
 if __name__ == "__main__":    
     main()
 
-st.markdown("### Influencer Distribution")
+# st.markdown("### Influencer Distribution")
 
-# st.sidebar.header("Mapping Demo")
-st.write(
-    """To view the dynamic visualization, please visit [INS and YOUTUBE INFLUENCERS DISTRIBUTION](https://public.tableau.com/app/profile/tong.lin/viz/audiencemapsforinsandyoutube/Dashboard1)"""
-)
+# # st.sidebar.header("Mapping Demo")
+# st.write(
+#     """To view the dynamic visualization, please visit [INS and YOUTUBE INFLUENCERS DISTRIBUTION](https://public.tableau.com/app/profile/tong.lin/viz/audiencemapsforinsandyoutube/Dashboard1)"""
+# )
 
-st.image('imgs/map.jpeg')
+# st.image('imgs/map.jpeg')
